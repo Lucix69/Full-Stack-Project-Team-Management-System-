@@ -136,10 +136,9 @@ This application was proudly built by the JADz team for the **SRM Institute of S
 
 | Role | Name |
 | :--- | :--- |
-| Developer | **J** |
-| Developer | **A** |
-| Developer | **D** |
-| Developer | **z** |
+| Developer | **Aditya Mukherjee RA2311056010202** |
+| Developer | **Jaivardhan Kanoria RA2311056010192** |
+| Developer | **Dharshan Kumar RA2310056010203** |
 
 ---
 
