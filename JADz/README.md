@@ -1,176 +1,148 @@
-# 🚀 JADz — Student Team Members Management Application
+<div align="center">
+  <img src="https://img.shields.io/badge/JADz-Team_Management-blue?style=for-the-badge&logo=react" alt="JADz Logo" />
+  <h1>🚀 JADz Student Team Management Platform</h1>
+  <p>
+    <em>A modern, full-stack application built for seamless student team collaboration and member profile management.</em>
+  </p>
 
-> **Course:** 21CSS301T – Full Stack Development  
-> **Assessment:** CLAT-2 (Online Assessment)  
-> **Institution:** SRM Institute of Science and Technology  
-> **Team Name:** JADz  
-
----
-
-## 📌 Project Description
-
-A full-stack web application that allows a student team (**JADz**) to manage their team members. Built with **React.js** on the frontend and **Node.js + Express + MongoDB** on the backend, it supports adding, viewing, and exploring individual team member profiles — including photo uploads.
-
----
-
-## 🛠️ Tech Stack
-
-| Layer      | Technology                    |
-|------------|-------------------------------|
-| Frontend   | React.js, React Router v6     |
-| Backend    | Node.js, Express.js           |
-| Database   | MongoDB + Mongoose ODM        |
-| HTTP Client| Axios                         |
-| File Upload| Multer                        |
-| Dev Tools  | VS Code, MongoDB Compass, Nodemon |
+  <!-- Badges -->
+  <p>
+    <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+    <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
+    <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express.js" />
+    <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" />
+  </p>
+</div>
 
 ---
 
-## 📁 Project Structure
+## 📖 Overview
 
-```
-JADz/
-├── backend/
-│   ├── models/
-│   │   └── Member.js         # Mongoose schema
-│   ├── routes/
-│   │   └── members.js        # All CRUD API routes
-│   ├── uploads/              # Uploaded profile images
-│   ├── server.js             # Express app entry point
-│   ├── .env                  # Environment variables
-│   └── package.json
-│
-├── frontend/
-│   ├── public/
-│   │   └── index.html
-│   ├── src/
-│   │   ├── components/
-│   │   │   ├── Navbar.js     # Navigation bar
-│   │   │   └── Navbar.css
-│   │   ├── pages/
-│   │   │   ├── HomePage.js           # Landing page
-│   │   │   ├── AddMemberPage.js      # Add member form
-│   │   │   ├── ViewMembersPage.js    # Members list
-│   │   │   ├── MemberDetailsPage.js  # Single member view
-│   │   │   └── *.css                 # Page-specific styles
-│   │   ├── App.js            # Router & layout
-│   │   ├── App.css           # Global shared styles
-│   │   ├── index.js          # React entry point
-│   │   └── index.css         # CSS design system variables
-│   └── package.json
-│
-├── .gitignore
-└── README.md
-```
+**JADz** is a beautifully crafted Full-Stack Web Application designed specifically to manage, view, and organize student team members efficiently. Born out of the 21CSS301T Full Stack Development coursework, JADz serves as a comprehensive digital directory for teams to document roles, goals, and technical skill sets—all packaged within a highly responsive and interactive user interface.
+
+## ✨ Key Features
+
+- **🛡️ Comprehensive Profiles:** Store detailed information including roles, university roll numbers, batch years, degrees, internships, and career goals.
+- **📸 Profile Photo Uploads:** Seamlessly upload and serve member photos using `multer` and Express static file serving.
+- **⚡ Dynamic Routing:** Effortlessly navigate between the team dashboard, individual profile views, and the member addition form via `react-router-dom`.
+- **🎨 Modern UI/UX:** Built with a design-first approach utilizing vanilla CSS variables for a cohesive, responsive design system.
+- **🔌 RESTful Architecture:** Fully functional CRUD backend interacting gracefully with a NoSQL MongoDB database.
 
 ---
 
-## ⚙️ Installation & Setup
+## 🛠️ Technology Stack
+
+### **Frontend**
+*   **React.js** - Component-driven UI architecture.
+*   **React Router v6** - Client-side routing for SPA experience.
+*   **Axios** - Promise-based HTTP client.
+*   **CSS3** - Custom design system using variables.
+
+### **Backend**
+*   **Node.js & Express.js** - Robust server and API routing.
+*   **MongoDB & Mongoose ODM** - Flexible, document-oriented database.
+*   **Multer** - Middleware for handling `multipart/form-data` (image uploads).
+
+---
+
+## 🚀 Getting Started
+
+Follow these steps to get a local copy of JADz up and running on your machine.
 
 ### Prerequisites
-- Node.js v18+
-- MongoDB (local) or MongoDB Atlas URI
-- npm
 
-### 1. Clone the repository
+Ensure you have the following installed:
+*   [Node.js](https://nodejs.org/) (v14 or higher)
+*   [MongoDB](https://www.mongodb.com/) (Local instance or MongoDB Atlas account)
+
+### 1. Clone the Repository
 ```bash
-git clone https://github.com/<your-username>/JADz.git
-cd JADz
+git clone https://github.com/Lucix69/Full-Stack-Project-Team-Management-System-.git
+cd "Full-Stack-Project-Team-Management-System-/JADz"
 ```
 
-### 2. Backend Setup
+### 2. Backend Configuration
 ```bash
+# Navigate to backend directory
 cd backend
+
+# Install dependencies
 npm install
-```
 
-Create a `.env` file:
-```
-PORT=5000
-MONGO_URI=mongodb://localhost:27017/jadzdb
-```
+# Create a .env file and add the following:
+# PORT=5000
+# MONGO_URI=mongodb://localhost:27017/jadzdb
 
-Start the backend:
-```bash
-npm start
-# or for development with auto-reload:
+# Start the development server
 npm run dev
 ```
 
-### 3. Frontend Setup
+### 3. Frontend Configuration
+Open a new terminal window:
 ```bash
-cd ../frontend
+# Navigate to frontend directory
+cd frontend
+
+# Install dependencies
 npm install
+
+# Start the React development server
 npm start
 ```
-
-The app will open at **http://localhost:3000**  
-The backend runs at **http://localhost:5000**
+*The application will launch in your default browser at `http://localhost:3000`.*
 
 ---
 
-## 🔗 API Endpoints
+## 📡 API Endpoints
 
-### Base URL: `http://localhost:5000`
+The backend provides a clean RESTful API to interact with the database. Base URL: `http://localhost:5000/api`
 
-| Method | Endpoint             | Description                          |
-|--------|----------------------|--------------------------------------|
-| GET    | `/api/members`       | Retrieve all team members            |
-| GET    | `/api/members/:id`   | Retrieve a single member by ID       |
-| POST   | `/api/members`       | Add a new team member (with image)   |
-| PUT    | `/api/members/:id`   | Update an existing member            |
-| DELETE | `/api/members/:id`   | Delete a member                      |
-
-### POST /api/members — Form Data Fields
-
-| Field         | Type   | Required | Description                         |
-|---------------|--------|----------|-------------------------------------|
-| name          | String | ✅       | Full name of the member             |
-| role          | String | ✅       | e.g. Frontend Developer             |
-| email         | String | ✅       | Email address                       |
-| rollNumber    | String | ✅       | University roll number              |
-| year          | String | ✅       | Batch year e.g. 2024                |
-| degree        | String | ❌       | e.g. B.Tech (default)               |
-| aboutProject  | String | ❌       | Project description                 |
-| hobbies       | String | ❌       | Comma-separated hobbies             |
-| certificate   | String | ❌       | Certification(s)                    |
-| internship    | String | ❌       | Internship info                     |
-| aboutYourAim  | String | ❌       | Career goals                        |
-| image         | File   | ❌       | Profile photo (jpg/png/webp ≤5MB)   |
+| Method | Endpoint | Description |
+| :--- | :--- | :--- |
+| `GET` | `/members` | Fetches all team members. |
+| `GET` | `/members/:id` | Fetches details of a specific member by ID. |
+| `POST` | `/members` | Adds a new member (Supports `multipart/form-data` for images). |
+| `PUT` | `/members/:id` | Updates a specific member's details. |
+| `DELETE` | `/members/:id` | Deletes a team member from the database. |
 
 ---
 
-## 🌐 Pages
+## 📂 Project Structure
 
-| Route            | Page                 | Description                          |
-|------------------|----------------------|--------------------------------------|
-| `/`              | Home Page            | Landing page with team intro + stats |
-| `/add`           | Add Member Page      | Form to add a new team member        |
-| `/view`          | View Members Page    | Grid of all team member cards        |
-| `/members/:id`   | Member Details Page  | Full profile of a single member      |
-
----
-
-## 🧪 Testing API in Browser
-
-Open your browser and navigate to:
-
-- **All members:** `http://localhost:5000/api/members`
-- **Single member:** `http://localhost:5000/api/members/<member_id>`
-
----
-
-## 👥 Team JADz
-
-| Member | Role |
-|--------|------|
-| J      | Developer |
-| A      | Developer |
-| D      | Developer |
-| z      | Developer |
+```text
+📦 JADz
+ ┣ 📂 backend
+ ┃ ┣ 📂 models         # Mongoose Database Schemas
+ ┃ ┣ 📂 routes         # Express API Routes
+ ┃ ┣ 📂 uploads        # Local storage for member profile pictures
+ ┃ ┣ 📜 server.js      # Backend Entry Point
+ ┃ ┗ 📜 package.json
+ ┗ 📂 frontend
+   ┣ 📂 public         # Static HTML and Assets
+   ┣ 📂 src
+   ┃ ┣ 📂 components   # Reusable UI Components (Navbar, etc.)
+   ┃ ┣ 📂 pages        # Route components (Home, Add Member, Details)
+   ┃ ┣ 📜 App.js       # Main Routing Configuration
+   ┃ ┣ 📜 index.js     # React Entry Point
+   ┃ ┗ 📜 index.css    # Global CSS Design System
+   ┗ 📜 package.json
+```
 
 ---
 
-## 📝 License
+## 👥 The JADz Team
 
-This project was created for academic purposes as part of the SRM CLAT-2 assessment.
+This application was proudly built by the JADz team for the **SRM Institute of Science and Technology** CLAT-2 Assessment.
+
+| Role | Name |
+| :--- | :--- |
+| Developer | **J** |
+| Developer | **A** |
+| Developer | **D** |
+| Developer | **z** |
+
+---
+
+<div align="center">
+  <i>If you find this project helpful or impressive, consider leaving a ⭐ on the repository!</i>
+</div>
